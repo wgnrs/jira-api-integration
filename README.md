@@ -20,8 +20,7 @@ Este é um projeto de estudo para consumo da API do Jira. O objetivo é extrair,
 
 1. Clone este repositório:  
    ```bash
-   git clone https://github.com/wgnrs/jira-api-integration.git
-   
+   git clone https://github.com/wgnrs/jira-api-integration.git   
 2. Instale as dependências
 3. Configure as credenciais da API do JIRA
 4. Execute o script principal main.py
