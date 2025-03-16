@@ -1,4 +1,5 @@
 import requests
+import json
 from requests.auth import HTTPBasicAuth
 
 def get_task_info(issue_key, email, api_token):
@@ -9,7 +10,9 @@ def get_task_info(issue_key, email, api_token):
     }
 
     response = requests.get(url, headers=headers, auth=auth)
+    
     if response.status_code == 200:
+        print(json.dumps(response.json(), indent=4, ensure_ascii=False))
         return response.json()
     else:
         return f"Erro {response.status_code}: {response.text}"
