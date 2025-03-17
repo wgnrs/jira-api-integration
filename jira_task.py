@@ -1,6 +1,6 @@
-import json
 from jira_request_login import get_authentication
 import requests
+
 
 def get_task_info(issue_key, email, api_token):
     auth, headers = get_authentication(email, api_token)
@@ -12,6 +12,7 @@ def get_task_info(issue_key, email, api_token):
         return response.json()
     else:
         return f"Erro {response.status_code}: {response.text}"
+    
 
 def get_task_details(issue_key, email, api_token):
     auth, headers = get_authentication(email, api_token)
@@ -31,7 +32,6 @@ def get_task_details(issue_key, email, api_token):
         return f"Erro {response.status_code}: {response.text}"
     
 
-# Função para obter as informações da tarefa
 def get_task_names(issue_key, email, api_token):
     auth, headers = get_authentication(email, api_token)
     url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project=GTMS"
@@ -47,5 +47,17 @@ def get_task_names(issue_key, email, api_token):
         
         formatted_output = "\n\n".join(task_names)
         return formatted_output
+    else:
+        return f"Erro {response.status_code}: {response.text}"
+
+def get_task_total(issue_key, email, api_token):
+    auth,  headers = get_authentication(email, api_token)
+    url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project=GTMS"
+
+    response = requests.get(url, headers=headers, auth=auth)
+
+    if response.status_code == 200:
+        task_data = response.json()
+        return task_data["total"]
     else:
         return f"Erro {response.status_code}: {response.text}"
