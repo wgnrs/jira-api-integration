@@ -1,5 +1,6 @@
 from jira_request_login import get_authentication
 import requests
+from datetime import datetime
 
 def get_all_tasks(project_key, email, api_token):
     """
@@ -14,11 +15,8 @@ def get_all_tasks(project_key, email, api_token):
         return data["issues"]
     else:
         raise Exception(f"Erro {response.status_code}: {response.text}")
-
-from datetime import datetime
-
-
-from datetime import datetime
+    
+    
 
 def aggregate_tasks_by_assignee(project_key, email, api_token):
     """
