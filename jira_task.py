@@ -1,6 +1,20 @@
 from jira_request_login import get_authentication
 import requests
 
+def get_all_tasks(project_key, email, api_token):
+    """
+    Retorna uma lista de issues (tasks) do projeto indicado pela chave.
+    """
+    auth, headers = get_authentication(email, api_token)
+    # Utilize a query JQL para filtrar as tasks do projeto (por exemplo, GTMS)
+    url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project={project_key}&maxResults=100"
+    response = requests.get(url, headers=headers, auth=auth)
+    if response.status_code == 200:
+        data = response.json()
+        return data["issues"]
+    else:
+        raise Exception(f"Erro {response.status_code}: {response.text}")
+
 
 def get_task_info(issue_key, email, api_token):
     auth, headers = get_authentication(email, api_token)
