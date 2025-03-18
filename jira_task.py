@@ -3,11 +3,7 @@ import requests
 from datetime import datetime
 
 def get_all_tasks(project_key, email, api_token):
-    """
-    Retorna uma lista de issues (tasks) do projeto indicado pela chave.
-    """
     auth, headers = get_authentication(email, api_token)
-    # Utilize a query JQL para filtrar as tasks do projeto (por exemplo, GTMS)
     url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project={project_key}&maxResults=100"
     response = requests.get(url, headers=headers, auth=auth)
     if response.status_code == 200:
@@ -19,14 +15,7 @@ def get_all_tasks(project_key, email, api_token):
     
 
 def aggregate_tasks_by_assignee(project_key, email, api_token):
-    """
-    Agrega os dados das tasks do projeto, agrupando por colaborador.
-    Para cada colaborador, calcula:
-      - Total de tasks atribuídas
-      - Total de tasks concluídas
-      - Tempo médio de resolução (em horas)
-    """
-    tasks = get_all_tasks(project_key, email, api_token)  # Função que retorna todas as tasks do projeto
+    tasks = get_all_tasks(project_key, email, api_token)
     
     aggregation = {}
     
@@ -45,7 +34,6 @@ def aggregate_tasks_by_assignee(project_key, email, api_token):
         
         aggregation[assignee]["total_tasks"] += 1
         
-        # Verifica se a task foi concluída (se resolutiondate estiver preenchido)
         if fields.get("resolutiondate"):
             aggregation[assignee]["completed_tasks"] += 1
             
@@ -61,12 +49,10 @@ def aggregate_tasks_by_assignee(project_key, email, api_token):
             except Exception as e:
                 print(f"Erro ao calcular tempo para {issue['key']}: {e}")
     
-    # Calcula a média de tempo de resolução para cada colaborador, convertendo para horas
     result = []
     for assignee, stats in aggregation.items():
         avg_hours = None
         if stats["num_resolved"] > 0:
-            # Divide o total de segundos pela quantidade de tarefas resolvidas e converte para horas
             avg_hours = stats["total_resolution_time"] / stats["num_resolved"] / 3600
             avg_hours = round(avg_hours, 2)  # arredonda para 2 casas decimais
         result.append({
@@ -111,7 +97,7 @@ def get_task_details(issue_key, email, api_token):
 
 def get_task_names(issue_key, email, api_token):
     auth, headers = get_authentication(email, api_token)
-    url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project=GTMS"
+    url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project={issue_key}"
     
     response = requests.get(url, headers=headers, auth=auth)
     
@@ -129,7 +115,7 @@ def get_task_names(issue_key, email, api_token):
 
 def get_task_total(issue_key, email, api_token):
     auth,  headers = get_authentication(email, api_token)
-    url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project=GTMS"
+    url = f"https://atlasinovacoes-ws-testes-consumacao.atlassian.net/rest/api/3/search?jql=project={issue_key}"
 
     response = requests.get(url, headers=headers, auth=auth)
 

@@ -1,18 +1,15 @@
 import csv
 
-def export_to_csv(tasks, filename="jira_tasks.csv"):
+def export_to_csv(tasks, filename="info_tarefas.csv"):
     if not tasks:
         print("Nenhuma tarefa encontrada para exportação.")
         return
     
-    # Defina os campos que queremos no CSV
     fieldnames = ["key", "summary", "status", "assignee", "created", "resolution_date"]
     
-    # Abre o arquivo CSV para escrita
     with open(filename, mode="w", newline="", encoding="utf-8") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
-        
-        # Escreve o cabeçalho
+
         writer.writeheader()
         
         for task in tasks:
