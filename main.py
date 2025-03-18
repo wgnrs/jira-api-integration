@@ -1,5 +1,4 @@
-from jira_project import get_project_info
-from jira_task import get_task_info, get_task_details, get_task_names, get_task_total, get_all_tasks, aggregate_tasks_by_assignee
+from jira_task import get_all_tasks, aggregate_tasks_by_assignee
 from jira_export import export_to_csv
 
 email = "wagner.silva@atlasinovacoes.com.br"
@@ -29,29 +28,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-#project_info = get_project_info(10001, email, api_token)
-
-#task_info = get_task_info("SCRUM-1", email, api_token)
-#print("task info: \n", task_info)
-
-#task_details = get_task_details("SCRUM-1", email, api_token)
-#print("\n\n Detalhes da Task: \n", task_details)
-
-'''
-Test que retorna o nome das tasks + a quantidade de tasks.
-'''
-# print("Nome das Tasks: ")
-# task_names = get_task_names(issue_key, email, api_token)
-# print(task_names)
-
-# get_task_total(issue_key, email, api_token)
-# print(get_task_total(issue_key, email, api_token))
-
-'''
-teste que retorna todas as tasks
-'''
-# print(get_all_tasks(project_key, email, api_token))
-'''
-Teste que retorna 
-'''
