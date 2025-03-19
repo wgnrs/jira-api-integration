@@ -1,0 +1,200 @@
+[
+    {
+        "key": "GTMS-22",
+        "summary": "Criar uma apresentação de slides",
+        "status": "Em andamento",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:05.093-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-21",
+        "summary": "Criar perguntas frequentes",
+        "status": "Tarefas pendentes",
+        "priority": "Low",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:05.070-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-20",
+        "summary": "Criar uma página",
+        "status": "Tarefas pendentes",
+        "priority": "Low",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:05.048-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-19",
+        "summary": "Solicitar ilustração",
+        "status": "Tarefas pendentes",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:04.299-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-18",
+        "summary": "Fazer rascunho do conteúdo do blog",
+        "status": "Tarefas pendentes",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:04.298-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-17",
+        "summary": "Fazer rascunho do conteúdo do e-mail",
+        "status": "Tarefas pendentes",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:03.614-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-16",
+        "summary": "Solicitar recursos criativos",
+        "status": "Tarefas pendentes",
+        "priority": "Low",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:03.606-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-15",
+        "summary": "Lançar campanha publicitária",
+        "status": "Tarefas pendentes",
+        "priority": "Low",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:02.456-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-14",
+        "summary": "Reunião inicial de produto e marketing",
+        "status": "Pronto para o lançamento",
+        "priority": "High",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:02.086-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-13",
+        "summary": "Ilustrações para site e app móvel",
+        "status": "Em andamento",
+        "priority": "Medium",
+        "assignee": "Wagner da Silva Junior",
+        "created": "2025-03-14T12:25:01.721-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-12",
+        "summary": "Conduzir entrevistas com usuários para obter feedback",
+        "status": "Lançado",
+        "priority": "High",
+        "assignee": "Wagner da Silva Junior",
+        "created": "2025-03-14T12:25:01.533-0300",
+        "resolution_date": "2025-03-14T12:25:02.638-0300"
+    },
+    {
+        "key": "GTMS-11",
+        "summary": "Organizar o webinar",
+        "status": "Em andamento",
+        "priority": "Medium",
+        "assignee": "Wagner da Silva Junior",
+        "created": "2025-03-14T12:25:01.418-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-10",
+        "summary": "Blitz com a equipe de desenvolvimento",
+        "status": "Tarefas pendentes",
+        "priority": "Lowest",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.879-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-9",
+        "summary": "Texto para e-mail de lançamento do recurso",
+        "status": "Pronto para o lançamento",
+        "priority": "Highest",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.462-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-8",
+        "summary": "Nomear novos recursos",
+        "status": "Lançado",
+        "priority": "Highest",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.229-0300",
+        "resolution_date": "2025-03-14T12:25:02.954-0300"
+    },
+    {
+        "key": "GTMS-7",
+        "summary": "Blog de anúncio de atualizações mensais de recursos",
+        "status": "Pronto para o lançamento",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.227-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-6",
+        "summary": "Criar posicionamento e mensagens para novo recurso",
+        "status": "Pronto para o lançamento",
+        "priority": "High",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.203-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-5",
+        "summary": "Obter aprovações para posicionamento",
+        "status": "Em andamento",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.199-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-4",
+        "summary": "Publicar documentos de suporte",
+        "status": "Em andamento",
+        "priority": "Medium",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.213-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-3",
+        "summary": "Início de vendas",
+        "status": "Tarefas pendentes",
+        "priority": "Low",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.200-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-2",
+        "summary": "Atualizar a documentação para atualização do recurso",
+        "status": "Tarefas pendentes",
+        "priority": "Low",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.192-0300",
+        "resolution_date": null
+    },
+    {
+        "key": "GTMS-1",
+        "summary": "Criar guias de produtos",
+        "status": "Lançado",
+        "priority": "Highest",
+        "assignee": "Unassigned",
+        "created": "2025-03-14T12:25:00.191-0300",
+        "resolution_date": "2025-03-14T12:25:01.112-0300"
+    }
+]
